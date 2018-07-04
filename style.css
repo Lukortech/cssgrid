@@ -17,31 +17,73 @@
     grid-template-rows: 2em 1fr 1fr 1fr 1em;
     grid-template-areas: 
         'n n n n n n n n n'
-        't . c c c c c c .'
-        't . c c c c c c .'
-        't . c c c c c c .'
+        't c c c c c c c .'
+        't c c c c c c c .'
+        't c c c c c c c .'
         'f f f f f f f f f';
+    
 }
+/*floats*/
+.fl_l{
+    float:left;
+    height: 1em;
+}
+.fl_r{
+    float:right;
+    height: 1em;
+}
+.fl_c{
+    float:center;
+    height: 1em;
+}
+
 .navbar{
     grid-area: n;
     background-color: var(--sBckColor);
-    position:sticky; top:0;
+    position:sticky; top:0; padding: 0.5em; display: block;
+    box-shadow: 0 5px 50px 2px var(--tBckColor);
 }
+.navbar a{
+    text-decoration: none;
+    color: var(--pTxtColor);
+    margin: 0.5em;
+}
+.navbar .logo:before{
+    background-image: url('https://www.humanrightslogo.net/sites/default/files/HRLogoCMYKsmallRGB.png');
+    background-size: 1em 1em;
+    display: inline-block;
+    width: 1em; 
+    height: 1em;
+    content:"";
+}
+
+
 .threads{
     grid-area: t;
-    background-color: var(--pBckColor);
+    background-color: var(--tBckColor);
+    color: var(--sTxtColor);
+}
+.threads ul li{
+    list-style: none;
+}
+.threads ul li a:before{
+    content:"\a";
+    white-space: pre;
 }
 .content{
     grid-area: c;
     background-color: var(--pBckColor);
+    color: var(--pTxtColor);
 }
 .background{
     background-image: url('https://images.pexels.com/photos/1029411/pexels-photo-1029411.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-    background-size: contain;
+    background-size: cover;
+    /*filter:hue-rotate(-20deg);*/
 }
 .footer{
     grid-area: f;
     background-color: var(--sBckColor);
     padding: 0.5em;
+    color: var(--tTxtColor);
 }
   
