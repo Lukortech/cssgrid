@@ -14,55 +14,73 @@
 .container{
     display:grid;
     box-sizing: border-box;
-    grid-template-columns: repeat(5, 20vw);
-    grid-template-rows: 8vh repeat(3, 28vh) 8vh;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: 20vh 80vh;
     grid-template-areas:
-    'n n n n n'
-    's c c c c'
-    's c c c c'
-    's c c c c'
-    'f f f f f';
+    'out out'
+    'num op'
     height: 100vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-size: var(--bigSize);
 }
-.navbar{
-    grid-area: n;
-    display:grid;
-    grid-template-columns: repeat(5, 20vw);
-    background-color: var(--sBckColor);
-    border-right: 0.2em solid var(--transparent);
-    border-left: 0.2em solid var(--transparent);
+.output{
+    grid-area: out;
+    grid-column: 1 / span 2;
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #888;
 }
-.navbar a{
-    display: inline-block;
-    box-shadow: 0px 0px 6px 6px var(--sBckColor);
-    transition: box-shadow 0.6s linear;
-    margin: 0.5em;
+.output h1:first-child{
+    justify-self: end;
+    align-self: center;
+}
+.output form{
+    justify-self: center;
+    align-self: center;
+}
+.output p:last-child{
+    justify-self: center;
+    align-self: center;
+}
+.c-item{
+    justify-self: center;
+    align-self: center;
+    display: block;
+    padding:1em;
+    background-color: rgba(120,120,120,0.5);
+    border: 1px solid black;
+    border-radius: 0.5em;
+    user-select: none;
+}
+.c-item:hover{
+    background: linear-gradient(to bottom, rgba(120,120,120,0.3), rgba(120,120,120,0.8));
+}
+.numbers{
+    grid-area: num;
+    grid-column: 1 / 1;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #AAA;
+    
+}
+.c-item{
+    justify-self: center;
+    align-self: center;
+}
+.options{
+    grid-area: op;
+    grid-column: 2 / 2;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #DDD;
+}
+.symbol{
+    font-weight: bold;
 }
 
-
-.navbar a:hover{ 
-    box-shadow: 0px 0px 0px 10px #FC5185;
-}
-
-
-
-
-
-.side{
-    grid-area: s;
-    background-color: var(--tBckColor);
-}
-.content{
-    grid-area: c;
-    background-color: var(--pBckColor);
-    overflow: auto;
-}
-.footer{
-    grid-area: f;
-    background-color: var(--sBckColor);
-}
 /*
 
 .navbar{
