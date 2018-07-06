@@ -18,7 +18,7 @@
     grid-template-rows: 20vh 80vh;
     grid-template-areas:
     'out out'
-    'num op'
+    'num op';
     height: 100vh;
     /*overflow: hidden;*/
     font-size: var(--bigSize);
@@ -50,11 +50,12 @@
     padding:1em;
     background-color: rgba(120,120,120,0.5);
     border: 1px solid black;
-    border-radius: 0.5em;
+    border-radius: 1em;
     user-select: none;
 }
 .c-item:hover{
-    background: linear-gradient(to bottom, rgba(120,120,120,0.3), rgba(120,120,120,0.8));
+    background: linear-gradient(to bottom, rgba(100,100,100,0.3), rgba(120,120,120,0.8));
+    transition: ease-in 0.1s;
 }
 .numbers{
     grid-area: num;
