@@ -17,7 +17,7 @@
             <form name="calculator">
                 <input type="text" name="display" id="display" disabled>
             </form>
-            <p>Choose math symbol</p>
+            <p>Choose math symbol!</p>
         </div>
         <div class="numbers">
             <input class="c-item" input type="button" name="one" value="1" onclick="calculator.display.value += '1'">
@@ -29,9 +29,9 @@
             <input class="c-item" input type="button" name="one" value="7" onclick="calculator.display.value += '7'">
             <input class="c-item" input type="button" name="one" value="8" onclick="calculator.display.value += '8'">
             <input class="c-item" input type="button" name="one" value="9" onclick="calculator.display.value += '9'">
-            <input class="c-item" input type="button" name="one" value="c" onclick="calculator.display.value += 'c'">
+            <input class="c-item" input type="button" name="one" value="c" onclick="calculator.display.value = ''">
             <input class="c-item" input type="button" name="one" value="0" onclick="calculator.display.value += '0'">
-            <input class="c-item" input type="button" name="one" value="=" onclick="calculator.display.value += '='">
+            <input class="c-item" input type="button" name="one" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
 
         </div>
         <div class="options">
