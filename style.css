@@ -25,16 +25,15 @@
     grid-column: 1/span 3;
     grid-row: 1/1;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    background-color: var(--pBckColor);
+    background-color: var(--tBckColor);
     overflow: hidden;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 60px 2px var(--qBckColor);
     z-index: 1;
 }
 .navlink {
     display: grid;
     justify-content: center;
     align-content: center;
-    background-color: wheat;
     border-bottom: 1px solid var(--transparent);
 }
 .navlink a{
@@ -47,24 +46,41 @@
     color: var(--pTxtColor);
 }
 .navlink:hover{
-    border-bottom: 1px solid var(--qBckColor);
+    border-bottom: 1px solid var(--pTxtColor);
 }
 
 .socials{
-    position: relative; top:1fr;
+    position: relative; top:calc(0.2*var(--lTxt));
     width: 100vw;
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: var(--lTxt);
     padding:0.1em;
+    z-index: 1;
+    background-color: var(--transparent);
+    box-shadow: 0 0 5px var(--qBckColor);
 }
-.facebook{
-    color: red;
+
+.main{
+    overflow-y: scroll;
+    display: grid;
+    grid-row: 2/2;
+    grid-column: 2/2;
+    margin-top: calc(1.3*var(--lTxt));
+    background-color:var(--sBckColor);
+    padding: 1em;
+    z-index: 2;
+    border-left:1px dotted var(--pBckColor);
+    border-radius: 1em;
+    box-shadow: inset 0px 200px 30px -200px rgba(0,0,0,0.75);
 }
 
-
-
-
+.footer{
+    display: grid;
+    grid-row: 3/3;
+    grid-column: 1/4;
+    background-color: var(--tBckColor);
+}
 
 
 
