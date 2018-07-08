@@ -6,25 +6,40 @@
     --tBckColor: rgba(246, 245, 174, 1);
     --qBckColor: rgba(129, 240, 229, 1);
     --transparent: rgba(0,0,0,0);
-    --sTxt: 5%;
-    --lTxt: 10%;
+    --sTxt: 2vh;
+    --lTxt: 3vh;
 }
 .container{
     display:grid;
     box-sizing: border-box;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 5vh 90vh 5vh;
     height: 100%;
     /*overflow: hidden;*/
-    font-size: var(--bigSize);
-}
-.item{
-    border: 1px solid rgba(255, 255, 255, 0.301)
+    font-size: var(--lTxt);
+    color: var(--pTxtColor);
 }
 .navigation{
+    display: grid;
     grid-column: 1/span 3;
     grid-row: 1/1;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: var(--pBckColor);
     overflow: hidden;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0 0 5px;
 }
+.navigation > div:nth-child(1){
+    border-bottom: 1px solid var(--transparent);
+}
+.navigation > div:nth-child(1):hover{
+    border-bottom: 1px solid var(--qBckColor);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    border:none;
+}
+/* to use grid properly remember about :nth-child(6)*/ 
