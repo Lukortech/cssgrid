@@ -1,25 +1,30 @@
 :root{
-    --pTxtColor: black;
+    --pTxtColor: rgba(39, 76, 119, 1);
     --sTxtColor: darkgrey;
-    --tTxtColor: grey;
-    --pBckColor: white;
-    --sBckColor: lightblue;
-    --tBckColor: CornflowerBlue;
+    --pBckColor: rgba(224, 141, 172, 1);
+    --sBckColor: rgba(205, 255, 249, 1);
+    --tBckColor: rgba(246, 245, 174, 1);
+    --qBckColor: rgba(129, 240, 229, 1);
     --transparent: rgba(0,0,0,0);
-    --bigSize: 3vh;
-    --medSize: 2vh;
-    --smlSize: 1.5vh;
-    --footer_size: 5vh;
+    --sTxt: 5%;
+    --lTxt: 10%;
 }
 .container{
     display:grid;
     box-sizing: border-box;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     height: 100%;
     /*overflow: hidden;*/
     font-size: var(--bigSize);
 }
 .item{
-    background-color: rgba(212, 150, 34, 0.541))
+    border: 1px solid rgba(255, 255, 255, 0.301)
+}
+.navigation{
+    grid-column: 1/span 3;
+    grid-row: 1/1;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    background-color: var(--pBckColor);
+    overflow: hidden;
 }
