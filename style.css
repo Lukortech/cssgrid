@@ -14,8 +14,9 @@
     box-sizing: border-box;
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-rows: 5vh 90vh 5vh;
-    height: 100%;
-    /*overflow: hidden;*/
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     font-size: var(--lTxt);
     color: var(--pTxtColor);
 }
@@ -23,23 +24,48 @@
     display: grid;
     grid-column: 1/span 3;
     grid-row: 1/1;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     background-color: var(--pBckColor);
     overflow: hidden;
-    justify-items: center;
-    align-items: center;
     box-shadow: 0 0 5px;
+    z-index: 1;
 }
-.navigation > div:nth-child(1){
+.navlink {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: wheat;
     border-bottom: 1px solid var(--transparent);
 }
-.navigation > div:nth-child(1):hover{
-    border-bottom: 1px solid var(--qBckColor);
-}
-a{
+.navlink a{
     text-decoration: none;
 }
-a:hover{
-    border:none;
+.navlink a:active{
+    color: var(--pTxtColor);
 }
+.navlink a:visited{
+    color: var(--pTxtColor);
+}
+.navlink:hover{
+    border-bottom: 1px solid var(--qBckColor);
+}
+
+.socials{
+    position: relative; top:1fr;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: var(--lTxt);
+    padding:0.1em;
+}
+.facebook{
+    color: red;
+}
+
+
+
+
+
+
+
 /* to use grid properly remember about :nth-child(6)*/ 
