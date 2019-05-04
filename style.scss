@@ -1,10 +1,102 @@
+// Text colors for the page:
+// [ https://www.sessions.edu/color-calculator/ ]
+
+  // Text Color 1
+  $txt-color1:#383838;
+  $txt-color2: #e9edf4;
+  $txt-color3: #2cb1fe;
+  
+  // Background colors
+  $bg-color1: #ffa96b;
+  $bg-color2: #ff6b86;
+
+@mixin variations($name, $color, $percentage) {
+  $primary: $color;
+  $light: lighten($color, $percentage);
+  $dark: darken($color, $percentage);
+
+  .#{$name} {
+    color: $primary;
+    &-light {color: $light;}
+    &-dark {color: $dark;}
+  }
+
+}
+
+@include variations(txt-c-black, $txt-color1, 20%);
+@include variations(txt-c-grey, $txt-color2, 20%);
+@include variations(txt-c-blue, $txt-color3, 20%);
+
+@mixin grid($name, $amount, $size) {
+
+  .#{$name} {
+    display:grid;
+    grid-template-columns: repeat($amount, $size);
+  }
+
+}
+@include grid(grid-col-3, 3, 1fr);
+// grid-col-3
+
 body{
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  border: 1em $bg-color1 solid;
+  width:100%;
+  height: 100vh;
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-
+.grid {
+  --items: 16;
+  grid-auto-rows: calc(100vh / var(--items));
+  grid-auto-columns: calc(100% / var(--items));
+}
+h1{
+  margin: 0;
+}
+nav{
+  position: fixed;
+    top: 0px;
+    right: 0px;
+    display: block;
+    height: 100%;
+    z-index: 2;
+    transform: translate3d(calc(100% - 100px), 0px, 0px);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.05s;
+    overflow: hidden;
+    ul{
+      list-style: none;
+      margin: 25rem 0;
+      li{
+        a{
+          text-decoration: none;
+          display: block;
+          transition: transform 1s;
+          &::after{
+            display: block;
+            position: relative;
+            width: 100%;
+            top: -.5em;
+            right: -1em;
+            content: "";
+            border-bottom: darken($bg-color1, 10%) 3px solid;
+            z-index: -1;
+            opacity: .4;
+            transition: 0.4s opacity;
+          }
+          &:hover{
+            transform: scale(2, 2);
+            transition: transform 1s;
+            &::after{
+              opacity: 0;
+              transition: 0.4s opacity;
+            }
+          }
+        }
+      }
+    }
+}
+.wrapper {
+  padding: 2em;
 }

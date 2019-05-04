@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Css Grid Construction</title>
+  <title>A simplistic resume</title>
   <link rel="stylesheet" href="style.css">
   <script src="scripts.js" async></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <!--METAS-->
   <meta charset="UTF-8">
   <meta name="keywords" content="HTML, CSS, Cssgrid, Grid, JavaScript">
   <meta name="author" content="Łukasz Formela">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Imports -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- favIcon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
-<body>
-  <div class="container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
+<body class="border-primary txt-c-black-dark">
+  <div class="wrapper">
+    <div class="about content">
+      <h1 class="txt-c-blue">About me</h1>
+      <p class="social-description">Standarized text fetched via API request that's gonna be everywhere on my social media</p>
+      <div class="grid-col-3">
+        <h2>
+          I am currently a front-end developer @<a class="txt-c-blue" href="https://www.marviq.com/en">Marviq</a>.<br/>
+          I am working with Laravel and Wordpress themes. On top of that I am responsible for re-creating the designs using scss and gulp.
+        </h2>
+        <p class="overall">
+
+        </p>
+        <p class="detail">
+
+        </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a class="txt-c-blue" href="/" target="_blank" rel="noopener noreferrer">About</a></li>
+        <li><a class="txt-c-blue" href="/hobbies" target="_blank" rel="noopener noreferrer">Hobbies</a></li>
+        <li><a class="txt-c-blue" href="/work" target="_blank" rel="noopener noreferrer">Work</a></li>
+        <li><a class="txt-c-blue" href="/writing" target="_blank" rel="noopener noreferrer">Writing</a></li>
+      </ul>
+    </nav>
   </div>
 </body>
 </html>
